@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Kenzhie Impekz</title>
+    <link rel="stylesheet" href="../Shared/NavbarFooter.css">
+    <link rel="stylesheet" href="Style.css">
+    <script src="https://kit.fontawesome.com/e8542fcf67.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <script src="../Shared/Navbar.js"></script>
+
+    <div class="container">
+        <div class="container-login">
+            <div class="container-kotak">
+                <div class="login-register">
+                    <div id="logina" onclick="gantiLogin()">Login</div>
+                    <div id="register" onclick="gantiRegister()">Register</div>
+                </div>
+
+                <div id="divError"></div>
+
+                <div class="form">
+                    <div class="username">
+                        Username
+                        <input placeholder="Input your username" id="inputUsername">
+                    </div>
+                    <div class="password">
+                        Password
+                        <input type="password" placeholder="Input your password" id="inputPassword">
+                    </div>
+                    <button id="submit">Log in</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-register">
+            <div class="container-kotak">
+                <div class="login-register">
+                    <div id="login" onclick="gantiLogin()">Login</div>
+                    <div id="registera" onclick="gantiRegister()">Register</div>
+                </div>
+
+                <div id="divErrorRegis"></div>
+
+                <div class="form">
+                    <div class="username">
+                        Username
+                        <input placeholder="Input your username" id="inputUsernameRegis">
+                    </div>
+                    <div class="email">
+                        Email
+                        <input type="email" placeholder="Input your email" id="inputEmailRegis">
+                    </div>
+                    <div class="age">
+                        Age
+                        <input type="number" placeholder="Input your Age" id="inputAgeRegis">
+                    </div>
+                    <div class="password">
+                        Password
+                        <input type="password" placeholder="Input your password" id="inputPasswordRegis">
+                    </div>
+                    <div class="repassword">
+                        Re-enter Password
+                        <input type="password" placeholder="Re-enter your password" id="inputRepasswordRegis">
+                    </div>
+                    <div class="policy">
+                        <input type="checkbox" id="policy" value="check">
+                        I agree to the terms and conditions
+                    </div>
+                    <button id="submit-register">Register</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../Shared/Footer.js"></script>
+
+    <script src="App.js"></script>
+</body>
+</html>

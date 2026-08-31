@@ -1,0 +1,329 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: lighter;
+    font-size: small;
+}
+
+@font-face {
+    font-family: HYWenHei;
+    src: url('../Fonts/zh-cn.ttf');
+}
+
+body {
+    background-color: var(--bg);
+}
+
+.carousel {
+    max-width: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-slide {
+    display: flex;
+    width: max-content;
+}
+
+.carousel-slide-img {
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.carousel-text {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.carousel-text-header p {
+    font-family: HYWenHei;
+    font-weight: 400;
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+}
+
+.carousel-text-desc {
+    width: 50%;
+    margin-bottom: 3em;
+    margin-top: 3em;
+    line-height: 1.6;
+}
+
+#lastClone {
+    background: linear-gradient(0deg, var(--scrim), var(--scrim)), url('Images/Sumeru_City.webp');
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+}
+
+#mondstat {
+    background: linear-gradient(0deg, var(--scrim), var(--scrim)), url('Images/Mondstadt.webp');
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+}
+
+#liyue {
+    background: linear-gradient(0deg, var(--scrim), var(--scrim)), url('Images/liyue.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+}
+
+#inazuma {
+    background: linear-gradient(0deg, var(--scrim), var(--scrim)), url('Images/inazuma.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+}
+
+#sumeru {
+    background: linear-gradient(0deg, var(--scrim), var(--scrim)), url('Images/Sumeru_City.webp');
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+}
+
+#firstClone {
+    background: linear-gradient(0deg, var(--scrim), var(--scrim)), url('Images/Mondstadt.webp');
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+}
+
+#prevBtn,
+#nextBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    font-size: clamp(26px, 3vw, 34px);
+    color: white;
+    cursor: pointer;
+    padding: 12px;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+#prevBtn {
+    left: 3%;
+}
+
+#nextBtn {
+    right: 3%;
+}
+
+#prevBtn:hover,
+#nextBtn:hover {
+    transform: translateY(-50%) scale(1.15);
+    color: var(--accent);
+}
+
+.more-wrap {
+    margin-left: 70px;
+    display: flex;
+    flex-direction: column;
+}
+
+.more-wrap button {
+    display: flex;
+    justify-content: flex-start;
+    font-weight: 100;
+    scale: 0.9;
+}
+
+.more-wrap a {
+    width: fit-content;
+}
+
+.moreHeader {
+    display: flex;
+    align-items: flex-start;
+    gap: 1em;
+    text-align: left;
+}
+
+.moreHeader p {
+    font-family: HYWenHei;
+    font-size: clamp(1.4rem, 2.6vw, 2rem);
+}
+
+.moreInfo {
+    margin-bottom: 2%;
+}
+
+.moreP {
+    width: 35%;
+    text-align: left;
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+#mondstatMore {
+    background: linear-gradient(88.75deg, rgba(0, 0, 0, 0.5) -4.14%, rgba(0, 0, 0, 0) 91.05%), url('Images/mondstat2.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+#liyueMore {
+    background: linear-gradient(85.3deg, rgba(0, 0, 0, 0.6) 12.58%, rgba(0, 0, 0, 0) 69.1%), url('Images/Liyue2.webp');
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+#inazumaMore {
+    background: linear-gradient(82deg, rgba(0, 0, 0, 0.55) 8%, rgba(0, 0, 0, 0) 72%), url('Images/inazuma2.webp');
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+#sumeruMore {
+    background: linear-gradient(77.9deg, rgba(0, 0, 0, 0.5) 24.34%, rgba(0, 0, 0, 0) 77.12%), url('Images/sumerumore.jpg');
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#sumeruMore::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: clamp(80px, 10vw, 150px);
+    background: linear-gradient(to top, #000000, transparent);
+    pointer-events: none;
+}
+
+.fadeinLeft {
+    animation: fadeInLeft 1.4s both;
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .fadeinLeft {
+        animation: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .more-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .more-wrap button {
+        scale: 0.8;
+    }
+
+    .moreInfo {
+        margin-left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .moreP {
+        width: 70%;
+        margin-left: 0;
+        text-align: center;
+        font-size: 13px;
+        word-spacing: 0.2em;
+    }
+
+    .moreP,
+    .moreHeader p {
+        text-shadow: 0 1px 6px rgba(0, 0, 0, 0.7);
+    }
+
+    .carousel-text-desc {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .more-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .moreInfo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .moreP {
+        width: 80%;
+        text-align: center;
+        font-size: 12px;
+        word-spacing: 0.2em;
+    }
+
+    .carousel-text-desc {
+        width: 70%;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #lastClone,
+    #mondstat,
+    #liyue,
+    #inazuma,
+    #sumeru,
+    #firstClone,
+    #mondstatMore,
+    #liyueMore,
+    #inazumaMore,
+    #sumeruMore {
+        background-position: center;
+    }
+}

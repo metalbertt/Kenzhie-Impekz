@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    color: black;
+    font-family: 'Inter', sans-serif;
+    font-weight: lighter;
+    font-size: small;
+}
+
+body {
+    background-color: white;
+    min-height: 100vh;
+}
+
+.container {
+    position: relative;
+    height: 100vh;
+    background-image: url('Images/Background-Full.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container-login,
+.container-register {
+    position: absolute;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    top: 0px;
+    bottom: 0px;
+    height: 100vh;
+    width: 500px;
+    left: min(55vw, calc(100vw - 500px));
+    background-color: rgba(255, 255, 255, 0.2);
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.container-register {
+    display: none;
+}
+
+.container-kotak {
+    position: relative;
+    width: 100%;
+}
+
+#login,
+#register,
+#logina,
+#registera {
+    user-select: none;
+    margin-left: 70px;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: 400;
+    transition: color 0.2s ease;
+}
+
+#login:hover,
+#register:hover {
+    color: #2415a3;
+}
+
+#logina,
+#registera {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+#login,
+#register,
+#logina,
+#registera,
+.username,
+.password,
+.email,
+.repassword,
+.age,
+.policy {
+    color: #0E025B;
+}
+
+.login-register {
+    margin-top: clamp(120px, 20vh, 200px);
+    display: flex;
+    align-items: baseline;
+}
+
+#divError,
+#divErrorRegis {
+    margin-left: 70px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    min-height: 20px;
+    font-size: 16px;
+    color: red;
+}
+
+.form {
+    margin-top: 10px;
+    margin-left: 70px;
+    font-size: 18px;
+    padding-bottom: 48px;
+}
+
+.username,
+.password,
+.email,
+.repassword,
+.age {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+#inputUsername,
+#inputPassword,
+#inputUsernameRegis,
+#inputPasswordRegis,
+#inputEmailRegis,
+#inputAgeRegis,
+#inputRepasswordRegis {
+    margin-top: 10px;
+    border-radius: 8px;
+    border: none;
+    height: 35px;
+    width: 80%;
+    padding-left: 10px;
+    font-size: 16px;
+    transition: box-shadow 0.2s ease;
+}
+
+#inputUsername:focus,
+#inputPassword:focus,
+#inputUsernameRegis:focus,
+#inputPasswordRegis:focus,
+#inputEmailRegis:focus,
+#inputAgeRegis:focus,
+#inputRepasswordRegis:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #0E025B;
+}
+
+#submit,
+#submit-register {
+    user-select: none;
+    border-radius: 8px;
+    border: none;
+    background-color: #0E025B;
+    color: white;
+    padding: 14px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+#submit:hover,
+#submit-register:hover {
+    background-color: #2415a3;
+    transform: translateY(-2px);
+}
+
+::placeholder {
+    opacity: 0.45;
+    color: black;
+}
+
+.policy {
+    display: flex;
+    justify-content: start;
+    margin-bottom: 10px;
+    gap: 6px;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.policy input {
+    accent-color: #0E025B;
+}
+
+@media screen and (max-width: 768px) {
+    .container-login,
+    .container-register {
+        left: 0;
+        width: 100vw;
+    }
+}

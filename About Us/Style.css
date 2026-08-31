@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    color: black;
+    font-family: 'Inter', sans-serif;
+    font-weight: lighter;
+    font-size: small;
+}
+
+@font-face {
+    font-family: HYWenHei;
+    src: url('../Fonts/zh-cn.ttf');
+}
+
+body {
+    background-color: white;
+}
+
+.knockout {
+    height: 200vh;
+}
+
+.container {
+    clip: rect(0, auto, auto, 0);
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.container-solid {
+    top: 0;
+}
+
+.title {
+    position: fixed;
+    display: block;
+    margin: auto;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.title p {
+    font-family: HYWenHei;
+    letter-spacing: 0.1em;
+    text-align: center;
+    font-size: clamp(1.6rem, 4.5vw, 3.5rem);
+}
+
+.container-solid .title p {
+    background: url('Images/aboutBG.png');
+    background-size: 100vw auto;
+    background-position: center;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: black;
+}
+
+.container-img {
+    background-image: url('Images/aboutBG.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    top: 100vh;
+}
+
+.container-img .title p {
+    color: white;
+    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.35);
+}
+
+.info1234 {
+    background-image: url('Images/aboutBG2.png');
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.lil-info {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+}
+
+.infos {
+    margin: 1%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.infos img {
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.infos:hover img {
+    transform: scale(1.03);
+}
+
+.info-desc {
+    width: 333px;
+}
+
+.info-desc-header {
+    font-family: HYWenHei;
+    font-size: clamp(1.05rem, 1.6vw, 1.35rem);
+    margin-top: 7%;
+    margin-bottom: 7%;
+}
+
+.info-desc-p,
+.char-desc-p,
+.map-desc-p {
+    line-height: 1.6;
+}
+
+.char-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.char {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3vw;
+}
+
+.char-desc {
+    width: 20.9em;
+    margin-bottom: 5em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.char-desc-h {
+    font-family: HYWenHei;
+    font-size: clamp(1.05rem, 1.6vw, 1.35rem);
+}
+
+.char-desc-p {
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+.char-img {
+    margin: 5em;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.char-img:hover {
+    transform: scale(1.03);
+}
+
+.map-info {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--bg);
+}
+
+.carousel-item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-img {
+    object-fit: cover;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    animation: fade 0.9s ease;
+}
+
+.carousel-item::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--scrim);
+}
+
+.map-desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+    color: white;
+    width: 90%;
+}
+
+.map-desc-h {
+    font-family: HYWenHei;
+    font-size: clamp(1.4rem, 2.6vw, 2rem);
+    color: white;
+}
+
+.map-desc-p {
+    margin-top: 4%;
+    margin-bottom: 4%;
+    width: min(42em, 85%);
+    color: white;
+}
+
+@media screen and (max-width: 700px) {
+    .lil-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .infos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .info-desc {
+        text-align: center;
+        width: 18em;
+    }
+
+    .char-desc {
+        text-align: center;
+        justify-content: center;
+    }
+
+    .char-img {
+        margin: 0;
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .char-img {
+        width: min(100%, 348px);
+    }
+
+    .info-desc-header {
+        margin-top: 3%;
+        margin-bottom: 3%;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .lil-info img {
+        width: min(100%, 233px);
+    }
+
+    .char-img {
+        width: min(100%, 268px);
+    }
+
+    .map-desc-p {
+        font-size: 10px;
+    }
+
+    .info-desc-p,
+    .char-desc-p {
+        font-size: 10px;
+    }
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenzhie Impekz</title>
+    <link rel="stylesheet" href="../Shared/NavbarFooter.css">
+    <link rel="stylesheet" href="Style.css">
+    <script src="https://kit.fontawesome.com/e8542fcf67.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <script src="../Shared/Navbar.js"></script>
+
+    <div class="parallax">
+        <img src="Images/Background-Pendek.svg" alt="Background" id="background">
+        <div class="content">
+            <img src="Images/Kenzhie-impek-biru.png" alt="Kenzhie Impekz title" id="title">
+            <img src="Images/Aether-Pendek-Depan.svg" alt="Aether foreground" id="aether-depan">
+        </div>
+    </div>
+
+    <div class="news-updates">
+        <div id="news-updates">
+            <h1>News and Updates</h1>
+        </div>
+        <div class="container-news-slider">
+            <div class="container-3">
+                <div class="slide">
+                    <img src="Images/News-1.png" alt="News 1">
+                    <span class="tanggal">Feb 28, 2023</span>
+                    <span class="title-news">2.5 Announcement Program</span>
+                </div>
+                <div class="slide">
+                    <img src="Images/News-2.png" alt="News 2">
+                    <span class="tanggal">Feb 28, 2023</span>
+                    <span class="title-news">The Exquisite Night Chimes</span>
+                </div>
+                <div class="slide">
+                    <img src="Images/News-3.png" alt="News 3">
+                    <span class="tanggal">Feb 28, 2023</span>
+                    <span class="title-news">New Weapons</span>
+                </div>
+            </div>
+            <div class="container-3">
+                <div class="slide">
+                    <img src="Images/News-4.png" alt="News 4">
+                    <span class="tanggal">Feb 28, 2023</span>
+                    <span class="title-news">WindBlume's Breath</span>
+                </div>
+                <div class="slide">
+                    <img src="Images/News-5.png" alt="News 5">
+                    <span class="tanggal">Feb 28, 2023</span>
+                    <span class="title-news">The Exquisite Night Chimes</span>
+                </div>
+                <div class="slide">
+                    <img src="Images/News-6.png" alt="News 6">
+                    <span class="tanggal">Feb 28, 2023</span>
+                    <span class="title-news">2.4 Announcement Program</span>
+                </div>
+            </div>
+            <img src="Images/Panah-Kiri.png" alt="Previous" onclick="plusSlides(-1)" id="prev">
+            <img src="Images/Panah-Kanan.png" alt="Next" onclick="plusSlides(1)" id="next">
+        </div>
+    </div>
+
+    <div class="character">
+        <div class="judul-character">
+            <h1 id="character">Characters</h1>
+        </div>
+        <div class="container-character-slider">
+            <div class="character-slider">
+                <div class="nama-character">
+                    <h1>Dehya</h1>
+                </div>
+                <div class="gambar-character">
+                    <div class="atas">
+                        <img src="Images/Character-Dehya-Atas.png" alt="Dehya top">
+                    </div>
+                    <div class="tengah">
+                        <img src="Images/Character-Dehya.png" alt="Dehya">
+                    </div>
+                    <div class="bawah">
+                        <img src="Images/Character-Dehya-Bawah.png" alt="Dehya bottom">
+                    </div>
+                </div>
+            </div>
+            <div class="character-slider">
+                <div class="nama-character">
+                    <h1>Mika</h1>
+                </div>
+                <div class="gambar-character">
+                    <div class="atas">
+                        <img src="Images/Character-Mika-Atas.png" alt="Mika top">
+                    </div>
+                    <div class="tengah">
+                        <img src="Images/Character-Mika.png" alt="Mika">
+                    </div>
+                    <div class="bawah">
+                        <img src="Images/Character-Mika-Bawah.png" alt="Mika bottom">
+                    </div>
+                </div>
+            </div>
+            <a onclick="plusSlidesCharacter(-1)">
+                <img src="Images/Panah-Kiri.png" alt="Previous character" id="panah-kiri">
+            </a>
+            <a onclick="plusSlidesCharacter(1)">
+                <img src="Images/Panah-Kanan.png" alt="Next character" id="panah-kanan">
+            </a>
+        </div>
+    </div>
+
+    <div class="weapon">
+        <div class="weapon-tulisan">
+            <h1>Weapons</h1>
+        </div>
+        <div class="weapon-gambar-aja">
+            <img src="Images/Weapons.png" alt="Weapons">
+        </div>
+    </div>
+
+    <script src="../Shared/Footer.js"></script>
+
+    <script src="App.js"></script>
+</body>
+</html>
