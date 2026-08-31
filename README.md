@@ -8,6 +8,6 @@ Complete ripoff of Genshin Impact (Initially Jenshin Impekz) website with Parall
 - Characters
 
 ## Built with
-HTML
-CSS (Animations & Styling)
-JavaScript
+- HTML
+- CSS (Animations & Styling)
+- JavaScript
